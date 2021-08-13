@@ -24,8 +24,26 @@ int fibonacci(int N) {
     1  2  3  4  5  6   7   8   9
 
 */
-int primo(int N) {
-    return 0;
+//Declaracion de las librerias que se van a utilizar
+#include <iostream>
+using namespace std;
+
+int primo (int a) { //Inicializacion metodo primo
+    int contador = 1;
+    int aux = 1; 
+    while (contador <= a) {
+        int numDivisores = 0;
+        aux++;
+        for (int i = 1; i <= aux; i++){
+            if (aux%i == 0){
+                numDivisores++;
+            }
+        }
+        if (numDivisores == 2){
+            contador++;
+        }
+    }
+    return aux;
 }
 
 /* Determina si un numero es capicua o no.
