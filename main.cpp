@@ -27,8 +27,23 @@ int primo(int N) {
     retorna 0 si no es capicua
     retoran 1 si es capicua
 */
-int capicua(int N) {
-    return 0;
+int capicua(int n){
+	//cout << "Ingrese el numero: ";
+	//cin >> n;
+	int cap;
+	for (int a=1000;a<=n;a++){
+		int sum=0;
+		int copia=n;
+			while (n>0){	
+			sum=sum*10+n%10;
+			n=n/10;	
+		}
+	if (copia==sum)
+		cap=1;
+	else 
+		cap=0;		
+	}
+	return cap;			
 }
 
 
@@ -48,7 +63,7 @@ int main()
   std::string name;
   std::cout << "El fibonacci de 8 " << fibonacci(8) << std::endl;   // 21
   std::cout << "El primo numer 8 " << fibonacci(8) << std::endl;    // 19
-  std::cout << "El primo numer 8 " << capicua(11211) << std::endl ;    // 1 
+  std::cout << "El numero 11211 es capicua? " << capicua(11211) << std::endl ;    // 1 
   std::cout << "El residuo de  13 entre 4 " << residuo(13, 4) << std::endl;    // 1 
 }
 
