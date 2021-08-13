@@ -10,7 +10,12 @@
     1 2 3 4 5 6 7   8 
 */
 int fibonacci(int N) {
-    return 0;
+	if(N==1 || N==2){
+		return 1;
+	}
+	else{
+		return fibonacci(N-1)+fibonacci(N-2);
+	}
 }
 
 /* Imprimier en Navo numero primo
@@ -62,8 +67,13 @@ int main()
 {
   std::string name;
   std::cout << "El fibonacci de 8 " << fibonacci(8) << std::endl;   // 21
+<<<<<<< HEAD
   std::cout << "El primo numer 8 " << fibonacci(8) << std::endl;    // 19
   std::cout << "El numero 11211 es capicua? " << capicua(11211) << std::endl ;    // 1 
+=======
+  std::cout << "El primo numer 8 " << primo(8) << std::endl;    // 19
+  std::cout << "El capicua numer 8 " << capicua(11211) << std::endl ;    // 1 
+>>>>>>> f8be79c5d6b4d85bfa22c5eeb96b01d65ca75ec3
   std::cout << "El residuo de  13 entre 4 " << residuo(13, 4) << std::endl;    // 1 
 }
 
